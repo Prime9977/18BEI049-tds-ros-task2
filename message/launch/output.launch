@@ -1,5 +1,5 @@
 <launch>
     <node name="mymsg_publisher" pkg="message" type="pub.py" output="screen"/>
-   
-    <node name="mymsg_subscriber" pkg="message" type="sub.py" output="screen"/>
+    <node name="mymsg_subscriber" pkg="message" type="med.py" output="screen"/>   
+    <node name="final_subscriber" pkg="message" type="sub.py" output="screen"/>
 </launch>

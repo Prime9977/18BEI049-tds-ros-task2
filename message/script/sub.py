@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 import rospy
-from message.msg import cus_msg
+from std_msgs.msg import Int64,Int16,String
 
 def main(data):
-    y = (data.a + data.b)* 3
-    rospy.loginfo("   a: %d b: %d (a+b)*3: %d" %(data.a,data.b,y))
+    
+    rospy.loginfo(" op: %d " , data.data )
 
 def listener():
-    rospy.init_node('mymsg_subscriber', anonymous=True)
-    rospy.Subscriber("mymsg", cus_msg, main)
+    rospy.init_node('final_subscriber', anonymous=True)
+    rospy.Subscriber("final", Int16, main)
 
     # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()

@@ -1,6 +1,6 @@
 #!/usr/bin/env python  
 import rospy
-
+from std_msgs.msg import Int64,Int16,String
 from message.msg import cus_msg
 
 def main():
